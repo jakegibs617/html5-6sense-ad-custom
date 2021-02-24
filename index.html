@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8" />
+	<title>
+		A custom sample for dynamic html5 ads
+	</title>
+	<link rel="StyleSheet" href="styles.css" type="text/css" />
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<script type="text/javascript" src="https://acdn.adnxs.com/html5-lib/1.3.0/appnexus-html5-lib.min.js"></script>
+	<script>
+		// Company Name will be shown as the custom text on the Ad
+
+		var imageUrl = 'background-image.png'; // this image is shown for all
+		var loader = 'loading-icon.gif';
+		var companyUrlMapping = {
+			// Ad one
+			"MFA": {"link": "https://jacobgiberson.com", "text": "Like my art??", "buttonCTA": "Get in touch"},  
+			
+			// Ad 2
+			"Google": {"link": "https://github.com/jakegibs617/", "text": "Looking for a skillset like mine??", "buttonCTA": "Contact Me"},  
+			
+			// Ad 3
+			"6Sense": {"link": "https://github.com/jakegibs617/", "text": "This is what I was looking for as an example, but I had to build it instead", "buttonCTA": "Learn How"},  
+		};
+	</script>
+	<script src="index.js">
+	</script>
+</head>
+
+<body onLoad="init()">
+	<div>
+		<div id="content" class="imageClass">
+				<div id='text-area' class="textArea">
+					<div id='company-name' class='companyName'></div>
+					<div id='company-text' class='companyText'></div>
+					<div class="cta"><a id="company-cta" class="btn buttonCTA"></a></div>
+				</div>
+		</div>
+	</div>
+</body>
+
+</html>

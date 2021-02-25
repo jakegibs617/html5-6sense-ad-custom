@@ -29,7 +29,7 @@ function init() {
         }
         else {
           // the company name is not in the list you are targeting
-          companyName = "Default";          
+          companyName = undefined;          
           clickUrl = "https://www.a-link-that-wont-show-up-when-the-company-matches.com"
           companyText = "You are not my target audience"
           buttonCTA = "Defualt CTA text"
@@ -54,7 +54,10 @@ function displayPersonalizedText(userCompanyName, userCompanyText, userClickUrl,
   var companyTextEle = document.getElementById('company-text'); // the div that shows the custom text
   var companyCTAEle = document.getElementById('company-cta'); // the div that shows the custom text
   
-  companyNameEle.innerHTML = userCompanyName +','
+  // Show the company name if it exists, but not if there is no match
+  if (userCompanyName) {
+    companyNameEle.innerHTML = userCompanyName +','
+  };
   companyTextEle.innerHTML = userCompanyText
   companyCTAEle.innerHTML = userButtonCTA
 

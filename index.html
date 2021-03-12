@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
 	<meta charset="UTF-8" />
 	<title>
@@ -10,19 +9,34 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<script type="text/javascript" src="https://acdn.adnxs.com/html5-lib/1.3.0/appnexus-html5-lib.min.js"></script>
 	<script>
-		// Company Name will be shown as the custom text on the Ad
-
-		var imageUrl = 'background-image.png'; // this image is shown for all
-		var loader = 'loading-icon.gif';
+		var loader = "loading-icon.gif";
 		var companyUrlMapping = {
 			// Ad one
-			"MFA": {"link": "https://jacobgiberson.com", "text": "Like my art??", "buttonCTA": "Get in touch"},  
+			"MFA": {
+				"link": "https://jacobgiberson.com", 
+				"text1": "Like my art??", 
+				"text2": "additional text with different styling", 
+				"buttonCTA": "Get in touch",
+				"bgimage": "backgroundimage1.jpg"
+			},  
 			
 			// Ad 2
-			"Google": {"link": "https://github.com/jakegibs617/", "text": "Looking for a skillset like mine??", "buttonCTA": "Contact Me"},  
+			"Google": {
+				"link": "https://github.com/jakegibs617/", 
+				"text1": "Looking for a skillset like mine??", 
+				"text2": "additional text with different styling", 
+				"buttonCTA": "Contact Me",
+				"bgimage": "backgroundimage2.jpg"
+			},  
 			
 			// Ad 3
-			"6Sense": {"link": "https://github.com/jakegibs617/", "text": "This is what I was looking for as an example, but I had to build it instead", "buttonCTA": "Learn How"},  
+			"6Sense": {
+				"link": "https://github.com/jakegibs617/", 
+				"text1": "This is what I was looking for as an example, but I had to build it instead", 
+				"text2": "additional text with different styling", 
+				"buttonCTA": "Learn How",
+				"bgimage": "backgroundimage3.jpg"
+			}
 		};
 	</script>
 	<script src="index.js">
@@ -34,11 +48,11 @@
 		<div id="content" class="imageClass">
 				<div id='text-area' class="textArea">
 					<div id='company-name' class='companyName'></div>
-					<div id='company-text' class='companyText'></div>
+					<div id='company-text1' class='companyText1'></div>
+					<div id='company-text2' class='companyText2'></div>
 					<div class="cta"><a id="company-cta" class="btn buttonCTA"></a></div>
 				</div>
 		</div>
 	</div>
 </body>
-
 </html>
